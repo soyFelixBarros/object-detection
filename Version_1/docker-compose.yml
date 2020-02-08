@@ -27,6 +27,7 @@ object_detection:
     - ./CV/js_face_recognition.html:/usr/share/nginx/html/index.html
     - ./CV/opencv.js:/usr/share/nginx/html/opencv.js
     - ./CV/utils.js:/usr/share/nginx/html/utils.js
+    - ./CV/main.js:/usr/share/nginx/html/main.js
 
 
 

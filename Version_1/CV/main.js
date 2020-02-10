@@ -43,7 +43,7 @@ return vec;
 function recognize(face) {
 var vec = face2vec(face);
 
-var bestMatchName = 'cara';
+var bestMatchName = 'none';
 var bestMatchScore = 0.5;  // Actually, the minimum is -1 but we use it as a threshold.
 for (name in persons) {
 var personVec = persons[name];
@@ -89,10 +89,12 @@ function main() {
     navigator.mediaDevices.getUserMedia({video: true, audio: false})
     .then(function(stream) {
         camera.srcObject = stream;
-         camera.onloadedmetadata = function(e) {
+        camera.onloadedmetadata = function(e) {
             camera.play();
         };
     });
+
+    camera.play();
 
     // Abrir una transmisión de cámara
     var cap      = new cv.VideoCapture(camera);

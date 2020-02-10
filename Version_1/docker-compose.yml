@@ -24,6 +24,7 @@ object_detection:
     #- "8080:8080"         #JupyterNB
   volumes:
       #Volume moutning for image entry
+    - ./CV/video.html:/usr/share/nginx/html/video.html
     - ./CV/js_face_recognition.html:/usr/share/nginx/html/index.html
     - ./CV/opencv.js:/usr/share/nginx/html/opencv.js
     - ./CV/utils.js:/usr/share/nginx/html/utils.js
